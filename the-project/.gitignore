@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 config.js
-
+/Auth/Auth.js
 # testing
 /coverage
 

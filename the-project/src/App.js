@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { Navbar, Button } from 'react-bootstrap';
 import './App.css';
-
-import TestComponent from './components/Test_Component';
-
-
-
-
 
 class App extends Component {
   goTo(route) {
@@ -30,7 +23,8 @@ class App extends Component {
         <Navbar fluid>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#">Auth0 - React</a>
+              
+              
             </Navbar.Brand>
             <Button
               bsStyle="primary"
@@ -69,6 +63,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-
