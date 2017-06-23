@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ReduxPromise from 'redux-promise';
 
 import App from './App';
+import Calendar from './components/calendar/App';
 import RouteTest from './components/Route_Test'
 
 import reducers from './reducers';
@@ -19,6 +20,7 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
+          <Route path= '/calendar' component={Calendar} />
           <Route path= '/test' component={RouteTest} />
           <Route path= '/' component={App} />
         </Switch>
