@@ -1,9 +1,10 @@
-import { combineReducers } from 'redux';
-
-
+import { combineReducers } from 'redux'
+import EventsReducer from './reducer_eventslist'
+import ActiveEvent from './reducer_active_event'
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
-});
+   events: EventsReducer
+   , activeEvent: ActiveEvent
+})
 
-export default rootReducer;
+export default rootReducer
