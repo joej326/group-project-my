@@ -1,22 +1,12 @@
 import React, { Component } from 'react';
 import { Navbar, Button } from 'react-bootstrap';
-import { Navbar, Button } from 'react-bootstrap';
 
+import TaskBoard from './containers/TaskBoard';
 import './App.css';
 import logo from './Home/react3.jpg';
 class App extends Component {
   goTo(route) {
     this.props.history.replace(`/${route}`)
-  }
-
-
-import TaskBoard from './containers/TaskBoard';
-
-class App extends Component {
-  constructor(props){
-    super(props);
-
-
   }
 
   login() {

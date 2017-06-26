@@ -5,7 +5,7 @@ import Home from './Home/Home';
 import Callback from './Callback/Callback';
 import Auth from './Auth/Auth';
 import history from './history';
-import executiveView from './executiveView/executiveView';
+import ExecutiveView from './ExecutiveView/ExecutiveView';
 
 const auth = new Auth();
 
@@ -23,7 +23,7 @@ export const makeMainRoutes = () => {
           <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
           <Route path="/callback" render={(props) => {
             handleAuthentication(props);
-            return <Callback {...props} /> 
+            return <Callback {...props} />
           }}/>
         </div>
       </BrowserRouter>
