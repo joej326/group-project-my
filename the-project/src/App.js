@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Navbar, Button } from 'react-bootstrap';
-import { Navbar, Button } from 'react-bootstrap';
-
+=======
+>>>>>>> master
+>>>>>>> master
 import './App.css';
 import logo from './Home/react3.jpg';
 class App extends Component {
@@ -9,16 +13,22 @@ class App extends Component {
     this.props.history.replace(`/${route}`)
   }
 
+<<<<<<< HEAD
 
 import TaskBoard from './containers/TaskBoard';
+
+
 
 class App extends Component {
   constructor(props){
     super(props);
 
-
+  
   }
 
+
+
+=======
   login() {
     this.props.auth.login();
   }
@@ -27,24 +37,30 @@ class App extends Component {
     this.props.auth.logout();
   }
 
+>>>>>>> master
   render() {
     const { isAuthenticated } = this.props.auth;
 
     return (
       <div>
+<<<<<<< HEAD
+        <TaskBoard />
+      </div>
+    )
+=======
         <Navbar fluid>
           <Navbar.Header>
             <Navbar.Brand>
-
+             
             </Navbar.Brand>
-
+            
             {
               !isAuthenticated() && (
                   <div className="cont">
-
+                  
                   <img src={logo} alt="My logo" />
                   <h4>Admin-Redux</h4>
-                   <Button
+                   <Button 
                   className="button button1"
                   onClick={this.login.bind(this)}>
                   Click To Sign In
@@ -56,7 +72,7 @@ class App extends Component {
               isAuthenticated() && (
                   <div className="cont">
                   <img src={logo} alt="My logo" />
-                  <Button
+                  <Button 
                   className="button button1"
                   onClick={this.login.bind(this)}>
                  Sign In
@@ -68,7 +84,7 @@ class App extends Component {
         </Navbar>
       </div>
     );
-
+>>>>>>> master
   }
 }
 
