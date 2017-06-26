@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, Button } from 'react-bootstrap';
 import './App.css';
-
+import logo from './Home/react3.jpg';
 class App extends Component {
   goTo(route) {
     this.props.history.replace(`/${route}`)
@@ -23,36 +23,33 @@ class App extends Component {
         <Navbar fluid>
           <Navbar.Header>
             <Navbar.Brand>
-              
-              
+             
             </Navbar.Brand>
-            <Button
-              bsStyle="primary"
-              className="btn-margin"
-              onClick={this.goTo.bind(this, 'home')}
-            >
-              Home
-            </Button>
+            
             {
               !isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.login.bind(this)}
-                  >
-                    Log In
+                  <div className="cont">
+                  
+                  <img src={logo} alt="My logo" />
+                  <h4>Admin-Redux</h4>
+                   <Button 
+                  className="button button1"
+                  onClick={this.login.bind(this)}>
+                  Click To Sign In
                   </Button>
+                  </div>
                 )
             }
             {
               isAuthenticated() && (
-                  <Button
-                    bsStyle="primary"
-                    className="btn-margin"
-                    onClick={this.logout.bind(this)}
-                  >
-                    Log Out
+                  <div className="cont">
+                  <img src={logo} alt="My logo" />
+                  <Button 
+                  className="button button1"
+                  onClick={this.login.bind(this)}>
+                 Sign In
                   </Button>
+                  </div>
                 )
             }
           </Navbar.Header>
