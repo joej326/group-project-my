@@ -1,1 +1,0 @@
-# glorious-group-project
