@@ -1,3 +1,85 @@
+<<<<<<< HEAD
+*{
+  list-style: none;
+}
+
+body{
+  width: 100%;
+}
+
+::-webkit-scrollbar{
+  background:linear-gradient(#191b18, #7a7c82);
+}
+::-webkit-scrollbar-corner{
+  display: none;
+}
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(#191b18, #7a7c82);
+}
+
+.App {
+  text-align: center;
+}
+
+.todo-containers-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #283138;
+  color: #ebebeb;
+}
+.todo-container{
+  background: #323E46;
+  margin: 4%;*/
+  padding: 0% 7% 2% 7%;
+  text-align: center;
+  border-radius: 10px;
+  overflow: scroll;
+  height: 36vw;
+}
+.todo-items{
+  border: 2px solid #DCE6EB;
+  border-radius: 10px;
+  margin-bottom: 20%;
+  text-align: center;
+  position: relative;
+  list-style: none;
+  right: 1.5vw;
+  background: #283138;
+  margin: 2vw 2vw 2vw 2vw;
+}
+
+.checkbox-and-event {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 9vw;
+  height: 5vw;
+}
+
+.green{
+  color: #4a8b1f;
+}
+.yellow{
+  color: #cdab18
+}
+.blue{
+  color: #3b47e4;
+}
+.red{
+  color: #ED6661;
+}
+.red:hover{
+  color: #ff9a9a;
+  animation: grow forwards 0.3s;
+}
+
+@keyframes grow {
+  from { transform: scale(1);}
+  to { transform: scale(2);}
+}
+=======
 * { 
   box-sizing: border-box; 
   }
@@ -46,3 +128,4 @@ h4 {
      -moz-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
+>>>>>>> master
