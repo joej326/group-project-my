@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Navbar, Button } from 'react-bootstrap';
 import { Navbar, Button } from 'react-bootstrap';
 
 import './App.css';
@@ -10,10 +10,7 @@ class App extends Component {
   }
 
 
-
 import TaskBoard from './containers/TaskBoard';
-
-
 
 class App extends Component {
   constructor(props){
@@ -22,9 +19,6 @@ class App extends Component {
 
   }
 
-
-
-
   login() {
     this.props.auth.login();
   }
@@ -32,7 +26,6 @@ class App extends Component {
   logout() {
     this.props.auth.logout();
   }
-
 
   render() {
     const { isAuthenticated } = this.props.auth;
