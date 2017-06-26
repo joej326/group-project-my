@@ -1,14 +1,29 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
+
 import { Navbar, Button } from 'react-bootstrap';
-=======
->>>>>>> master
+
 import './App.css';
 import logo from './Home/react3.jpg';
 class App extends Component {
   goTo(route) {
     this.props.history.replace(`/${route}`)
   }
+
+
+
+import TaskBoard from './containers/TaskBoard';
+
+
+
+class App extends Component {
+  constructor(props){
+    super(props);
+
+
+  }
+
+
+
 
   login() {
     this.props.auth.login();
@@ -18,6 +33,7 @@ class App extends Component {
     this.props.auth.logout();
   }
 
+
   render() {
     const { isAuthenticated } = this.props.auth;
 
@@ -26,16 +42,16 @@ class App extends Component {
         <Navbar fluid>
           <Navbar.Header>
             <Navbar.Brand>
-             
+
             </Navbar.Brand>
-            
+
             {
               !isAuthenticated() && (
                   <div className="cont">
-                  
+
                   <img src={logo} alt="My logo" />
                   <h4>Admin-Redux</h4>
-                   <Button 
+                   <Button
                   className="button button1"
                   onClick={this.login.bind(this)}>
                   Click To Sign In
@@ -47,7 +63,7 @@ class App extends Component {
               isAuthenticated() && (
                   <div className="cont">
                   <img src={logo} alt="My logo" />
-                  <Button 
+                  <Button
                   className="button button1"
                   onClick={this.login.bind(this)}>
                  Sign In
@@ -59,7 +75,11 @@ class App extends Component {
         </Navbar>
       </div>
     );
+
   }
 }
 
 export default App;
+
+
+// onDataChange={shouldReceiveNewData()}
