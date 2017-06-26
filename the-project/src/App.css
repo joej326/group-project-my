@@ -1,24 +1,80 @@
+*{
+  list-style: none;
+}
+
+body{
+  width: 100%;
+}
+
+::-webkit-scrollbar{
+  background:linear-gradient(#191b18, #7a7c82);
+}
+::-webkit-scrollbar-corner{
+  display: none;
+}
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(#191b18, #7a7c82);
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.todo-containers-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #283138;
+  color: #ebebeb;
+}
+.todo-container{
+  background: #323E46;
+  margin: 4%;*/
+  padding: 0% 7% 2% 7%;
+  text-align: center;
+  border-radius: 10px;
+  overflow: scroll;
+  height: 36vw;
+}
+.todo-items{
+  border: 2px solid #DCE6EB;
+  border-radius: 10px;
+  margin-bottom: 20%;
+  text-align: center;
+  position: relative;
+  list-style: none;
+  right: 1.5vw;
+  background: #283138;
+  margin: 2vw 2vw 2vw 2vw;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.checkbox-and-event {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 9vw;
+  height: 5vw;
 }
 
-.App-intro {
-  font-size: large;
+.green{
+  color: #4a8b1f;
+}
+.yellow{
+  color: #cdab18
+}
+.blue{
+  color: #3b47e4;
+}
+.red{
+  color: #ED6661;
+}
+.red:hover{
+  color: #ff9a9a;
+  animation: grow forwards 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes grow {
+  from { transform: scale(1);}
+  to { transform: scale(2);}
 }

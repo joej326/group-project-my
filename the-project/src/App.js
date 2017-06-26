@@ -1,15 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-import TestComponent from './components/Test_Component';
+
+import TaskBoard from './containers/TaskBoard';
+
+
 
 class App extends Component {
+  constructor(props){
+    super(props);
+
+  
+  }
+
+
+
   render() {
     return (
-      <TestComponent />
+      <div>
+        <TaskBoard />
+      </div>
     )
   }
 }
 
 export default App;
+
+
+// onDataChange={shouldReceiveNewData()}

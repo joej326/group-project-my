@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ReduxPromise from 'redux-promise';
+import TaskBoard from './containers/TaskBoard';
 
 import App from './App';
 import RouteTest from './components/Route_Test'
@@ -19,6 +20,7 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
+          <Route path= '/taskboard' component={TaskBoard} />
           <Route path= '/test' component={RouteTest} />
           <Route path= '/' component={App} />
         </Switch>
