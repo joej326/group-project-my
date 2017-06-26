@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import { Navbar, Button } from 'react-bootstrap';
+=======
+>>>>>>> master
 import './App.css';
 import logo from './Home/react3.jpg';
 class App extends Component {
