@@ -1,4 +1,4 @@
-import history from '../history';
+import history from '../../../history';
 import auth0 from 'auth0-js';
 import { AUTH_CONFIG } from './auth0-variables';
 
@@ -42,7 +42,7 @@ export default class Auth {
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem('expires_at', expiresAt);
-    // navigate to the home route
+    // navigate to the dashboard route
     history.replace('/home');
   }
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import "./Home.css";
-import logo from './react3.jpg'
-
+import "./home.css";
+import logo from './logo.jpg'
+// import { Button } from 'react-bootstrap';
 
 class Home extends Component {
   goTo(route) {

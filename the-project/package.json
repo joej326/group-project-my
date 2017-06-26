@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "auth0-js": "^8.8.0",
     "axios": "^0.16.2",
+<<<<<<< HEAD
     "bootstrap": "^3.3.7",
     "connect-ensure-login": "^0.1.1",
     "font-awesome": "^4.7.0",
@@ -14,6 +14,9 @@
     "moment": "^2.18.1",
     "passport": "^0.3.2",
     "passport-auth0": "^0.6.0",
+=======
+    "moment": "^2.18.1",
+>>>>>>> master
     "react": "^15.6.1",
     "react-big-calendar": "^0.14.4",
     "react-bootstrap": "^0.31.0",
@@ -21,7 +24,6 @@
     "react-dnd-html5-backend": "^2.4.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
-    "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "redux": "^3.7.0",
     "redux-promise": "^0.5.3"

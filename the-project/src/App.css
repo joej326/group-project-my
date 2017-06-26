@@ -1,4 +1,5 @@
 
+
 *{
   list-style: none;
 }
@@ -21,41 +22,16 @@ body{
   text-align: center;
 }
 
-.todo-containers-div{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #283138;
-  color: #ebebeb;
-}
-.todo-container{
-  background: #323E46;
-  margin: 4%;*/
-  padding: 0% 7% 2% 7%;
-  text-align: center;
-  border-radius: 10px;
-  overflow: scroll;
-  height: 36vw;
-}
-.todo-items{
-  border: 2px solid #DCE6EB;
-  border-radius: 10px;
-  margin-bottom: 20%;
-  text-align: center;
-  position: relative;
-  list-style: none;
-  right: 1.5vw;
-  background: #283138;
-  margin: 2vw 2vw 2vw 2vw;
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
 }
 
-.checkbox-and-event {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  width: 9vw;
-  height: 5vw;
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
 }
 
 .green{
@@ -112,19 +88,12 @@ h4 {
   text-shadow:1px 1px 0px #2d7baf;
 }
 
-.button {
-  position:relative;
-  /*float:bottom;*/
-  width:145px;
-  margin-top:30px;
-  padding-top: 10px;
-  top: 80%;
-  background:#00BFFF;
-  color:#fff;
-  font-weight:400;
-  text-shadow:1px 1px 0px #2d7baf;
-  box-shadow:0px 3px 0px #2d7baf;
-  -webkit-transition: all .3s ease-in-out;
-     -moz-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out;
+.App-intro {
+  font-size: large;
+
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }

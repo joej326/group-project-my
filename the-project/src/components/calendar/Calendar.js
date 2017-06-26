@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import events from '../../reducers/reducer_eventslist'
+import events from '../../reducers/calendar/reducer_eventslist'
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DragDropContext } from 'react-dnd'
 import BigCalendar from 'react-big-calendar'

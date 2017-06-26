@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -7,8 +8,12 @@ import ReduxPromise from 'redux-promise';
 import { makeMainRoutes } from './routes';
 
 import TaskBoard from './containers/TaskBoard';
+=======
+>>>>>>> master
 
+import ReactDOM from 'react-dom';
 import './index.css';
+<<<<<<< HEAD
 // import 'bootstrap/dist/css/bootstrap.css';
 // import { makeMainRoutes } from './routes';
 import ExecutiveView from './ExecutiveView/ExecutiveView';
@@ -23,23 +28,14 @@ const routes = makeMainRoutes();
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
+=======
+import 'bootstrap/dist/css/bootstrap.css';
+import { makeMainRoutes } from './routes';
+>>>>>>> master
 
+const routes = makeMainRoutes();
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-
-    <BrowserRouter>
-      <div>
-        <Switch>
-
-          <Route path= '/taskboard' component={TaskBoard} />
-
-          <Route path= '/calendar' component={Calendar} />
-
-          <Route path= '/test' component={RouteTest} />
-          <Route path= '/' component={App} />
-        </Switch>
-      </div>
-    </BrowserRouter>
-  </Provider>
-  , document.getElementById( 'root' ));
+  routes,
+  document.getElementById('root')
+);
