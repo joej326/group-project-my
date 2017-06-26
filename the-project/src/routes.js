@@ -5,7 +5,7 @@ import Home from './components/AuthComp/Home/Home';
 import Callback from './components/AuthComp/Callback/Callback';
 import Auth from './components/AuthComp/Auth/Auth';
 import history from './history';
-import executiveView from './components/AuthComp/executiveView/executiveView';
+import ExecutiveComp from './components/ExecutiveComp/executiveView';
 
 // *** BLENDING 
 import { Provider } from 'react-redux';
