@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Navbar, Button } from 'react-bootstrap';
 =======
->>>>>>> master
 >>>>>>> master
 import './App.css';
 import logo from './Home/react3.jpg';
@@ -13,22 +10,6 @@ class App extends Component {
     this.props.history.replace(`/${route}`)
   }
 
-<<<<<<< HEAD
-
-import TaskBoard from './containers/TaskBoard';
-
-
-
-class App extends Component {
-  constructor(props){
-    super(props);
-
-  
-  }
-
-
-
-=======
   login() {
     this.props.auth.login();
   }
@@ -37,17 +18,11 @@ class App extends Component {
     this.props.auth.logout();
   }
 
->>>>>>> master
   render() {
     const { isAuthenticated } = this.props.auth;
 
     return (
       <div>
-<<<<<<< HEAD
-        <TaskBoard />
-      </div>
-    )
-=======
         <Navbar fluid>
           <Navbar.Header>
             <Navbar.Brand>
@@ -84,11 +59,7 @@ class App extends Component {
         </Navbar>
       </div>
     );
->>>>>>> master
   }
 }
 
 export default App;
-
-
-// onDataChange={shouldReceiveNewData()}
