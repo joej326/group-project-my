@@ -33,7 +33,7 @@ class Home extends Component {
                   <Button 
                   className="button button1"
                   onClick={this.login.bind(this)}>
-                  Click To Sign In
+                  Click To Sign In HOME.JS
                   </Button>
                </div>
             )
@@ -44,26 +44,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-           
-              // !isAuthenticated() && (
-              //     <Button
-              //       bsStyle="primary"
-              //       className="btn-margin"
-              //       onClick={this.login.bind(this)}
-              //     >
-              //       Log In
-              //     </Button>
-              //   )
-            
-            // {
-            //   isAuthenticated() && (
-            //       <Button
-            //         bsStyle="primary"
-            //         className="btn-margin"
-            //         onClick={this.logout.bind(this)}
-            //       >
-            //         Log Out
-            //       </Button>
-            //     )
-            // }

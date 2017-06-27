@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import events from '../../reducers/calendar/reducer_eventslist'
+import events from './Events'
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DragDropContext } from 'react-dnd'
 import BigCalendar from 'react-big-calendar'
@@ -8,7 +8,6 @@ import moment from 'moment'
 import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
 
 import 'react-big-calendar/lib/css/react-big-calendar.css'
-// import '../../node_modules/react-big-calendar/lib/addons/dragAndDrop/styles.less';
 
 BigCalendar.setLocalizer(
   BigCalendar.momentLocalizer(moment)
@@ -22,13 +21,11 @@ class Dnd extends Component {
     this.state = {
       events: events()
     }
-
     this.moveEvent = this.moveEvent.bind(this)
   }
 
   moveEvent({ event, start, end }) {
     const { events } = this.state;
-    console.log(events)
     const idx = events.indexOf(event);
     const updatedEvent = { ...event, start, end };
 

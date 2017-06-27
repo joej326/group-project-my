@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux'
-import EventsReducer from './calendar/reducer_eventslist'
-import ActiveEvent from './calendar/reducer_active_event'
+import EventsReducer from '../components/CalendarComp/reducer_add_event'
+
 
 const rootReducer = combineReducers({
    events: EventsReducer
-   , activeEvent: ActiveEvent
 })
 
 export default rootReducer
