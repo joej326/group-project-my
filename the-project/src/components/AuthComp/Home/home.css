@@ -2,10 +2,10 @@
     box-sizing: border-box; 
 }
 
-.container-fluid {
-  height: 97vh;
-  width: 98vw;
-  background: url('./scape.jpg') no-repeat center center;
+.container-fluid2 {
+  height: 100vh;
+  width: 100vw;
+  background: url('./city.jpg') no-repeat center center;
   background-size: cover;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -42,64 +42,3 @@
 }
 
 
-h4 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, open sans-serif;
-  font-size:2.5em;
-  font-weight:400;
-  text-align: center;
-  margin-bottom:15px;
-  color:white;
-  text-shadow:1px 1px 0px #2d7baf;
-}
-
-.button {
-  position:relative;
-  /*float:bottom;*/
-  width:145px;
-  margin-top:30px;
-  top: 80%;
-  background:#00BFFF;
-  color:#fff;
-  font-weight:400;
-  text-shadow:1px 1px 0px #2d7baf;
-  box-shadow:0px 3px 0px #2d7baf;
-  -webkit-transition: all .3s ease-in-out;
-     -moz-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out;
-}
-
-
-.button1 {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-
-/*.cont {
-  height: 40vh;
-  width: 20vw;
-  background-color: rgba(105,105,105,0.4);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-.button {
-    background-color: #104E8B; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    /*transition-duration: 0.4s;
-}
-
-.button1 {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}*/
