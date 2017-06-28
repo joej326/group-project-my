@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 
 import Taskboard from './TaskBoard';
+import './../styles/taskboardStyle.css';
 
 export default class TaskBoardApp extends Component {
   constructor(props){
