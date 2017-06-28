@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import './App.css';
 import logo from './Home/react3.jpg';
 
@@ -19,12 +19,8 @@ class App extends Component {
     const { isAuthenticated } = this.props.auth;
 
     return (
-      <div>
-        <Navbar fluid>
-          <Navbar.Header>
-            <Navbar.Brand>
-             
-            </Navbar.Brand>
+       <div className="container-fluid">
+       
             
             {
               !isAuthenticated() && (
@@ -44,16 +40,15 @@ class App extends Component {
               isAuthenticated() && (
                   <div className="cont">
                   <img src={logo} alt="My logo" />
-                  <Button 
-                  className="button button1"
+                  <h4>Admin-Redux</h4>
+                  <Button className="button button1"
                   onClick={this.login.bind(this)}>
-                 Sign In
+                 Click To Sign In
                   </Button>
-                  </div>
+                 </div>
                 )
             }
-          </Navbar.Header>
-        </Navbar>
+         
       </div>
     );
   }
