@@ -13,6 +13,7 @@ import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
 
 import Calendar from './components/calendar/App';
+import TaskboardApp from './containers/Taskboard_App';
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
@@ -38,6 +39,7 @@ export const makeMainRoutes = () => {
             return <Callback {...props} />
           }}/>
           <Route path= '/calendar' component={Calendar} />
+          <Route path= '/taskboard' component={TaskboardApp} />
         </div>
        </BrowserRouter>
       </Provider>

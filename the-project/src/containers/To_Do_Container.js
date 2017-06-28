@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import $ from 'jquery';
 import 'jquery-ui-bundle';
 import 'jquery-ui-bundle/jquery-ui.css';
+import './../styles/taskboardStyle.css';
 
 
 import ToDoItems from './../components/To_Do_Items';
@@ -75,7 +76,7 @@ componentDidMount() {
         $('.ui-dialog').addClass('align-input');
 
 //enables the user to press enter to submit new event instead of having to click on the 'add event' button
-        
+
 
 
     });
