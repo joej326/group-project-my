@@ -7,12 +7,13 @@ import Auth from './components/AuthComp/Auth/Auth';
 import history from './history';
 
 
-// *** BLENDING 
+// *** BLENDING
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxPromise from 'redux-promise';
 
 import Calendar from './components/calendar/App';
+import TaskboardApp from './containers/Taskboard_App';
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
@@ -34,9 +35,10 @@ export const makeMainRoutes = () => {
           <Route exact path="/home" render={(props) => <Home auth={auth} {...props} />} />
           <Route exact path="/callback" render={(props) => {
             handleAuthentication(props);
-            return <Callback {...props} /> 
+            return <Callback {...props} />
           }}/>
           <Route path= '/calendar' component={Calendar} />
+          <Route path= '/taskboard' component={TaskboardApp} />
         </div>
        </BrowserRouter>
       </Provider>
