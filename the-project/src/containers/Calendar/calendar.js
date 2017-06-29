@@ -1,6 +1,4 @@
-
 import React, { Component } from 'react'
-import events from './Events'
 import HTML5Backend from 'react-dnd-html5-backend'
 import { DragDropContext } from 'react-dnd'
 import BigCalendar from 'react-big-calendar'
@@ -19,7 +17,7 @@ class Dnd extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      events: events()
+      events: this.props.events
     }
     this.moveEvent = this.moveEvent.bind(this)
   }

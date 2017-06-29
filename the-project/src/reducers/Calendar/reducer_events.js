@@ -1,7 +1,4 @@
-// New Date objects are formatted as new Date(YYYY/DD/MM)
-// Event objects have the properties: title: string, allDay boolean, start: new Date(), end: new Date()
-
-export default function(){
+export default function() {
    return [
   {
     'title': 'All Day Event',
@@ -29,8 +26,8 @@ export default function(){
 
   {
     'title': 'Some Event',
-    'start': new Date(2017, 5, 9, 0, 0, 0),
-    'end': new Date(2017, 5, 9, 0, 0, 0)
+    'start': new Date(2017, 5, 9),
+    'end': new Date(2017, 5, 9)
   },
   {
     'title': 'Conference',
@@ -72,6 +69,4 @@ export default function(){
     'end': new Date(2017, 5, 13, 10, 30, 0)
   }
    ]
-
-
 }

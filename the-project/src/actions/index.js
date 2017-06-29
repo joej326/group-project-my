@@ -1,10 +1,26 @@
+import axios from 'axios'
 
-export const ADD_EVENT = 'ADD_EVENT'
+export const FETCH_EVENTS = 'fetch_events'
+export const CREATE_EVENT = 'create_event'
 
-export function addEvent(newEvent) {
+const ROOT_URL = 'someURL'
+
+
+export function getEvents() {
+   const request = axios.get(`${ROOT_URL}/events`)
+
    return {
-      type: ADD_EVENT
-      , payload: newEvent
+      type: FETCH_EVENTS
+      , payload: request
    }
 }
 
+export function createEvent(values){
+   console.log(values)
+   const request = axios.post(`${ROOT_URL}/posts`, values)
+
+   return {
+      type: CREATE_EVENT
+      , payload: request
+   }
+}
