@@ -1,10 +1,16 @@
 import { combineReducers } from 'redux'
-import EventsReducer from './calendar/reducer_eventslist'
-import ActiveEvent from './calendar/reducer_active_event'
+
+// *** Events for Calendar ***
+import EventsReducer from './Calendar/reducer_events'
+import GetEventsReducer from './Calendar/reducer_get_events'
+
+
 
 const rootReducer = combineReducers({
    events: EventsReducer
-   , activeEvent: ActiveEvent
+   , getEvents: GetEventsReducer
 })
 
 export default rootReducer
+
+// combineReducer is how redux creates out applications state (different than components state)
