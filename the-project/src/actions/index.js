@@ -3,7 +3,7 @@ import axios from 'axios'
 export const FETCH_EVENTS = 'fetch_events'
 export const CREATE_EVENT = 'create_event'
 
-const ROOT_URL = 'someURL'
+const ROOT_URL = 'http://localhost:3006/api'
 
 
 export function getEvents() {
@@ -16,8 +16,8 @@ export function getEvents() {
 }
 
 export function createEvent(values){
-   console.log(values)
-   const request = axios.post(`${ROOT_URL}/posts`, values)
+   console.log("Create event", values)
+   const request = axios.post(`${ROOT_URL}/newevent`, values)
 
    return {
       type: CREATE_EVENT
