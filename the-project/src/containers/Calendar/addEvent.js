@@ -1,15 +1,58 @@
+
 import React, { Component } from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
-import { createEvent } from '../../actions/index' 
+import { createEvent } from '../../actions/index'
+
 
 class EventNew extends Component {
+   constructor(props){
+      super(props)
+      this.state = {
+         title: ''
+      }
+   }
+
+   handleTitleChange(val){
+      this.setState({
+         title: val
+      })
+   }
+
    renderField(field){
       return (
          <div>
             <label>{field.label}</label>
             <input
-            type='text'
+            type="text"
+            className="form-control"
+            {...field.input}
+            />
+            {field.meta.touched ? field.meta.error : ''}
+         </div>
+      )
+   }
+
+   renderAllDay(field){
+      return (
+         <div className='checkbox'>
+            <label></label>
+            <input
+            type='checkbox'
+            {...field.input}
+            /> All Day
+            {field.meta.touched ? field.meta.error : ''}
+         </div>
+      )
+   }
+
+   renderDate(field){
+      return (
+         <div>
+            <label>{field.label}</label>
+            <input
+            type='date'
+            className='form-control'
             {...field.input}
             />
             {field.meta.touched ? field.meta.error : ''}
@@ -25,8 +68,8 @@ class EventNew extends Component {
       const { handleSubmit } = this.props
 
       return (
-         <div>
             <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+               <div className="form-group">
                <Field
                label="Title"
                name="title"
@@ -35,21 +78,21 @@ class EventNew extends Component {
                <Field
                label="All Day"
                name="allDay"
-               component={this.renderField}
+               component={this.renderAllDay}
                />
                <Field
-               label="Start"
-               name="start"
-               component={this.renderField}
+               label="Start Date"
+               name="startDate"
+               component={this.renderDate}
                />
                <Field
-               label="End"
-               name="end"
-               component={this.renderField}
+               label="End Date"
+               name="endDate"
+               component={this.renderDate}
                />
-               <button className="btn">Add Event</button>
+               </div>
+               <button className="btn btn-primary">Add Event</button>
             </form>
-         </div>
       )
    }
 }

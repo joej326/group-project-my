@@ -14,6 +14,7 @@ module.exports = {
    },
 
    createEvent: (req, res, next) => {
+      console.log(req.body)
       let event = req.body
    db.events.add_event([event.title, event.allDay, event.start, event.end], (err, event) => {
       if (err) {

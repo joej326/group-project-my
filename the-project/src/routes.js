@@ -41,12 +41,8 @@ export const makeMainRoutes = () => {
             handleAuthentication(props);
             return <Callback {...props} />
           }}/>
-<<<<<<< HEAD
-          <Route exact path= '/calendar' component={Calendar} />
-=======
           <Route path= '/calendar' component={Calendar} />
           <Route path= '/taskboard' component={TaskboardApp} />
->>>>>>> master
         </div>
        </BrowserRouter>
       </Provider>

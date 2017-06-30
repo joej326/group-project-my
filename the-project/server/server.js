@@ -13,7 +13,7 @@ var config = require('./config')
 // EXPRESS
 var app = module.exports = express()
 
-
+app.use(cors())
 app.use(bodyParser.json())
 
 app.use(session({
@@ -42,7 +42,7 @@ var eventsCtrl = require('./controllers/eventsCtrl')
 
 // EVENTS
 // app.get('/api/events', eventsCtrl.getAllEvents)
-// app.post('/api/events', eventsCtrl.createEvent)
+app.post('/api/newevent', eventsCtrl.createEvent)
 
 // TEST
 app.get('/api/test', testCtrl.get)
