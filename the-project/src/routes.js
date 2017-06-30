@@ -18,6 +18,7 @@ import Callback from './components/AuthComp/Callback/Callback';
 import Auth from './components/AuthComp/Auth/Auth';
 // import ExecutiveComp from './components/ExecutiveComp/executiveView';
 import Calendar from './components/CalendarComp/App';
+import NavBar from './containers/Nav_Bar';
 
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
@@ -41,12 +42,12 @@ export const makeMainRoutes = () => {
             handleAuthentication(props);
             return <Callback {...props} />
           }}/>
-<<<<<<< HEAD
+
           <Route exact path= '/calendar' component={Calendar} />
-=======
-          <Route path= '/calendar' component={Calendar} />
-          <Route path= '/taskboard' component={TaskboardApp} />
->>>>>>> master
+          <Route exact path= '/taskboard' component={TaskboardApp} />
+          <Route path= '/' component={NavBar} />
+
+
         </div>
        </BrowserRouter>
       </Provider>
