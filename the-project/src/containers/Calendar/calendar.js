@@ -4,6 +4,8 @@ import { DragDropContext } from 'react-dnd'
 import BigCalendar from 'react-big-calendar'
 import moment from 'moment'
 import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
+import $ from 'jquery';
+import './../../styles/calendar.css';
 
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 
@@ -20,6 +22,31 @@ class Dnd extends Component {
       events: this.props.events
     }
     this.moveEvent = this.moveEvent.bind(this)
+  }
+
+  onCalendarReturn(){
+    $(document).ready(function(){
+      $('.rbc-month-row').addClass('calendar-square');
+      $('.calendar-square').css({height: '10vw'});
+    });
+  }
+
+  componentDidMount(){
+    let onCalendarReturn = this.onCalendarReturn;
+    $(document).ready(function(){
+      $('.rbc-month-row').addClass('calendar-square');
+      $('.rbc-active').addClass('return-button');
+      
+      $('.calendar-square').css({height: '10vw'});
+
+      $('.return-button').on('click',function(){
+        onCalendarReturn();
+
+      });
+    });
+
+
+
   }
 
   moveEvent({ event, start, end }) {
