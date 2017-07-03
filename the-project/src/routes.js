@@ -12,13 +12,13 @@ import TaskboardApp from './containers/Taskboard_App';
 import reducers from './reducers';
 
 // *** Components ***
-import AuthApp from './components/AuthComp/App';
+import AuthApp from './components/AuthComp/Login';
 import Home from './components/AuthComp/Home/Home';
 import Callback from './components/AuthComp/Callback/Callback';
 import Auth from './components/AuthComp/Auth/Auth';
-// import ExecutiveComp from './components/ExecutiveComp/executiveView';
+import App from './components/AuthComp/Home/App';
 import Calendar from './components/CalendarComp/App';
-import NavBar from './containers/Nav_Bar';
+
 
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
@@ -36,17 +36,8 @@ export const makeMainRoutes = () => {
      <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter history={history} component={AuthApp}>
         <div>
-          <Route exact path="/" render={(props) => <AuthApp auth={auth} {...props} />} />
-          <Route exact path="/home" render={(props) => <Home auth={auth} {...props} />} />
-          <Route exact path="/callback" render={(props) => {
-            handleAuthentication(props);
-            return <Callback {...props} />
-          }}/>
-
-          <Route exact path= '/calendar' component={Calendar} />
-          <Route exact path= '/taskboard' component={TaskboardApp} />
-          <Route path= '/' component={NavBar} />
-
+          <Route exact path="/login" render={(props) => <AuthApp auth={auth} {...props} />} />
+          <Route path="/" render={(props) => <App auth={auth} {...props} />} />
 
         </div>
        </BrowserRouter>

@@ -3,6 +3,8 @@ import { Button } from 'react-bootstrap';
 import './Auth.css';
 import logo from './Home/react3.jpg';
 
+import { Redirect } from 'react-router-dom';
+
 class App extends Component {
   goTo(route) {
     this.props.history.replace(`/${route}`)
@@ -27,7 +29,7 @@ class App extends Component {
                   <div className="contt">
                   
                   <img src={logo} alt="My logo" />
-                  <h4 class="adminti">Admin-Redux</h4>
+                  <h5>Admin-Redux</h5>
                    <Button 
                   className="button button1"
                   onClick={this.login.bind(this)}>
@@ -38,14 +40,7 @@ class App extends Component {
             }
             {
               isAuthenticated() && (
-                  <div className="cont">
-                  <img src={logo} alt="My logo" />
-                  <h4 class="adminti">Admin-Redux</h4>
-                  <Button className="button button1"
-                  onClick={this.login.bind(this)}>
-                 Click To Sign In
-                  </Button>
-                 </div>
+                  <Redirect to="/"/>
                 )
             }
          
