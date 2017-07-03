@@ -72,9 +72,9 @@ body{
   -webkit-border-radius:20px 0 0 0;
      -moz-border-radius:20px 0 0 0;
           border-radius:20px 0 0 0;
-  -webkit-box-shadow: 0px 1px 0px #344152, inset 0px 1px 0px white;
-     -moz-box-shadow: 0px 1px 0px #344152, inset 0px 1px 0px white;
-          box-shadow: 0px 1px 0px #344152, inset 0px 1px 0px white;
+  -webkit-box-shadow: 0px 1px 0px #344152, inset 0px 1px 0px black;
+     -moz-box-shadow: 0px 1px 0px #344152, inset 0px 1px 0px black;
+          box-shadow: 0px 1px 0px #344152, inset 0px 1px 0px black;
   box-shadow: 20px 20px 20px;
 }
 
