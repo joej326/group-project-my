@@ -23,10 +23,13 @@ class EventNew extends Component {
       return (
          <div
          className="black-text">
-            <label><h4>{field.label}</h4></label>
+            <label>
+                  <h4>{field.label}</h4>
+            </label>
             <input
             type="text"
             className="form-control"
+            placeholder="Title"
             {...field.input}
             />
             {field.meta.touched ? field.meta.error : ''}
@@ -52,6 +55,10 @@ class EventNew extends Component {
       this.props.createEvent(values)
    }
 
+   submitEvent(){
+         window.location.reload()
+   }
+
    render() {
       const { handleSubmit } = this.props
 
@@ -63,6 +70,11 @@ class EventNew extends Component {
                name="title"
                component={this.renderField}
                />
+               {/*<Field
+               label="Desctiption"
+               name="desc"
+               component={this.renderField}
+               />*/}
                <Field
                label="Start Date"
                name="startDate"
@@ -74,7 +86,11 @@ class EventNew extends Component {
                component={this.renderDate}
                />
                </div>
-               <button className="btn btn-primary">Add Event</button>
+               <button 
+               className="btn btn-primary"
+               onClick = {this.submitEvent}>
+               Add Event
+               </button>
             </form>
       )
    }

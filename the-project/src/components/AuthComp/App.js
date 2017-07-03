@@ -27,7 +27,7 @@ class App extends Component {
                   <div className="cont">
                   
                   <img src={logo} alt="My logo" />
-                  <h4>Admin-Redux</h4>
+                  <h4 class="adminti">Admin-Redux</h4>
                    <Button 
                   className="button button1"
                   onClick={this.login.bind(this)}>
@@ -40,7 +40,7 @@ class App extends Component {
               isAuthenticated() && (
                   <div className="cont">
                   <img src={logo} alt="My logo" />
-                  <h4>Admin-Redux</h4>
+                  <h4 class="adminti">Admin-Redux</h4>
                   <Button className="button button1"
                   onClick={this.login.bind(this)}>
                  Click To Sign In

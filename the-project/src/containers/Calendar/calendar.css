@@ -12,6 +12,10 @@ body {
   color: black;
 }
 
+.white-text {
+  color: white;
+}
+
 .rbc-btn {
   color: inherit;
   font: inherit;
@@ -134,7 +138,7 @@ button.rbc-input::-moz-focus-inner {
   background-image: none;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   color: white;
-  background-color: #ff4ff3;
+  background-color: #2382ff;
   border-color: #111511;
 }
 .rbc-toolbar button:active:hover,
@@ -142,7 +146,7 @@ button.rbc-input::-moz-focus-inner {
 .rbc-toolbar button:active:focus,
 .rbc-toolbar button.rbc-active:focus {
   color: white;
-  background-color: #ff4ff3;
+  background-color: #2382ff;
   border-color: #111511;
 }
 
@@ -196,7 +200,7 @@ button.rbc-input::-moz-focus-inner {
 .rbc-event {
   cursor: pointer;
   padding: 2px 5px;
-  background-color: #ff4ff3;
+  background-color: #2382ff;
   border-radius: 5px;
   color: #fff;
 }

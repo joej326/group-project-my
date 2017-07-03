@@ -5,13 +5,19 @@ import { connect } from 'react-redux'
 class EventsIndex extends Component {
 
    renderEvents(){
-      console.log(this.props.events)
       return _.map(this.props.events, event => {
          return (
             <div 
             key={event.event_id}
             className="panel-body">
                {event.title}
+               <div
+               className="text-right">
+               <button
+               className="btn btn-danger">
+                  Delete
+               </button>
+               </div>
             </div>
          )
       })
@@ -20,9 +26,11 @@ class EventsIndex extends Component {
    render() {
       return (
          <div>
-            <h4>Events</h4>
+            <h4
+            className="white-text">
+            Events</h4>
             <div
-            className="panel panel-default">
+            className="panel panel-default black-text">
                { this.renderEvents() }
             </div>               
          </div>

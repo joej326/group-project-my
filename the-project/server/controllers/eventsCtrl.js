@@ -15,16 +15,14 @@ module.exports = {
 
    createEvent: (req, res, next) => {
       let event = req.body
-   db.events.add_event([1, 8, event.title, false, event.startDate, event.endDate], (err, event) => {
+   db.events.add_event([1, 9, event.title, false, event.startDate, event.endDate], (err, event) => {
       if (err) {
          console.log("Add Event ERROR: ", err)
          return res.status(500).send(err)
       } else {
-         console.log("Event Added")
          return res.status(200).send(event)
       }
    })
-   
    }
 
 
