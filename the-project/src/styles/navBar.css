@@ -26,7 +26,7 @@
 }
 .open-tab p{
   font-size: 3vw;
-  color: #c19921;
+  color: #4ad5fe;
   padding: 0vw 1vw 0vw 1vw;
   margin-bottom: 0px; /*fighting bootstrap*/
 }
@@ -44,7 +44,7 @@
 }
 .close-tab p{
   font-size: 3vw;
-  color: #c19921;
+  color: #4ad5fe;
   padding: 0vw 1vw 0vw 1vw;
   margin-bottom: 0px; /*fighting bootstrap*/
 }
