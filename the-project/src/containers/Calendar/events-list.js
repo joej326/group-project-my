@@ -1,19 +1,18 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
 import { connect } from 'react-redux'
-import { getEvents } from '../../actions/index'
 
 class EventsIndex extends Component {
-   componentDidMount(){
-      this.props.getEvents()
-   }
 
    renderEvents(){
+      console.log(this.props.events)
       return _.map(this.props.events, event => {
          return (
-            <li key={event.id}>
-               {event}
-            </li>
+            <div 
+            key={event.event_id}
+            className="panel-body">
+               {event.title}
+            </div>
          )
       })
    }
@@ -21,10 +20,11 @@ class EventsIndex extends Component {
    render() {
       return (
          <div>
-            <h3>Events</h3>
-            <ul>
-               {/*{ this.renderEvents() }*/}
-            </ul>               
+            <h4>Events</h4>
+            <div
+            className="panel panel-default">
+               { this.renderEvents() }
+            </div>               
          </div>
       )
    }
@@ -36,4 +36,4 @@ function mapStateToProps(state){
    }
 }
 
-export default connect(mapStateToProps, { getEvents })(EventsIndex)
+export default connect(mapStateToProps)(EventsIndex)

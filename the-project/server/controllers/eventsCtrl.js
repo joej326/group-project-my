@@ -3,29 +3,29 @@ var app = require('../server')
 
 module.exports = {
    getAllEvents: (req, res, next) => {
-      db.events.get_events([user.email], (err, events) =>{
+      db.events.read_event([1], (err, events) =>{
          if(err){
             console.log(err)
             return res.status(500).send(err)
          } else {
-            return res.status(200).JSON(events)
+            return res.status(200).send(events)
          }
       })
    },
 
    createEvent: (req, res, next) => {
-      console.log(req.body)
       let event = req.body
-   db.events.add_event([event.title, event.allDay, event.start, event.end], (err, event) => {
+   db.events.add_event([1, 8, event.title, false, event.startDate, event.endDate], (err, event) => {
       if (err) {
          console.log("Add Event ERROR: ", err)
          return res.status(500).send(err)
       } else {
-         return res.status(200).JSON(event)
+         console.log("Event Added")
+         return res.status(200).send(event)
       }
    })
-}
-
+   
+   }
 
 
 }

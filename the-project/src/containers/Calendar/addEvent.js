@@ -21,8 +21,9 @@ class EventNew extends Component {
 
    renderField(field){
       return (
-         <div>
-            <label>{field.label}</label>
+         <div
+         className="black-text">
+            <label><h4>{field.label}</h4></label>
             <input
             type="text"
             className="form-control"
@@ -33,23 +34,10 @@ class EventNew extends Component {
       )
    }
 
-   renderAllDay(field){
-      return (
-         <div className='checkbox'>
-            <label></label>
-            <input
-            type='checkbox'
-            {...field.input}
-            /> All Day
-            {field.meta.touched ? field.meta.error : ''}
-         </div>
-      )
-   }
-
    renderDate(field){
       return (
          <div>
-            <label>{field.label}</label>
+            <label><h4>{field.label}</h4></label>
             <input
             type='date'
             className='form-control'
@@ -76,11 +64,6 @@ class EventNew extends Component {
                component={this.renderField}
                />
                <Field
-               label="All Day"
-               name="allDay"
-               component={this.renderAllDay}
-               />
-               <Field
                label="Start Date"
                name="startDate"
                component={this.renderDate}
@@ -102,10 +85,6 @@ function validate(values){
 
    if(!values.title){
       errors.title = "Enter an Event Title"
-   }
-
-   if(!values.allDay){
-      errors.allDay = "Is this an allday event?"
    }
 
    if(!values.start){
