@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+auth0-variables.js
 
 # testing
 /coverage

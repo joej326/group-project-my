@@ -1,7 +1,7 @@
 // APP AND CONFIG
 const app = require('../server.js')
 , db = app.get('db')
-, config = require('../config')
+, config = require('./config')
 
 // ALLOW CONSOLE OUTPUT
 var allowConsoleOutput = config.INITIALIZE_LOG
