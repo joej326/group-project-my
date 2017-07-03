@@ -41,7 +41,7 @@ var eventsCtrl = require('./controllers/eventsCtrl')
 // ENDPOINTS //
 
 // EVENTS
-// app.get('/api/events', eventsCtrl.getAllEvents)
+app.get('/api/events', eventsCtrl.getAllEvents)
 app.post('/api/newevent', eventsCtrl.createEvent)
 
 // TEST

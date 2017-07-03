@@ -31,7 +31,7 @@ class App extends Component {
                    <Button 
                   className="button button1"
                   onClick={this.login.bind(this)}>
-                  Click To Sign In APP.JS
+                  Click To Sign In
                   </Button>
                   </div>
                 )

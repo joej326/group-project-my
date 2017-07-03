@@ -1,3 +1,3 @@
 SELECT *
 FROM events
-WHERE $1 = event.user_email
+WHERE $1 = user_id
