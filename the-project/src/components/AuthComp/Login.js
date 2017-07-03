@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
-import './App.css';
+import './Auth.css';
 import logo from './Home/react3.jpg';
 
 import { Redirect } from 'react-router-dom';
@@ -26,14 +26,14 @@ class App extends Component {
             
             {
               !isAuthenticated() && (
-                  <div className="cont">
+                  <div className="contt">
                   
                   <img src={logo} alt="My logo" />
                   <h5>Admin-Redux</h5>
                    <Button 
                   className="button button1"
                   onClick={this.login.bind(this)}>
-                  Click To Sign In 
+                  Sign In
                   </Button>
                   </div>
                 )

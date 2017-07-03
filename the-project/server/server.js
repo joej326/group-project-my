@@ -38,15 +38,11 @@ var eventsCtrl = require('./controllers/eventsCtrl')
 , testCtrl = require('./controllers/testCtrl')
 
 
-// ENDPOINTS //
+// *** ENDPOINTS *** //
 
 // EVENTS
-// app.get('/api/events', eventsCtrl.getAllEvents)
+app.get('/api/events', eventsCtrl.getAllEvents)
 app.post('/api/newevent', eventsCtrl.createEvent)
-
-// TEST
-app.get('/api/test', testCtrl.get)
-app.post('/api/newtest', testCtrl.post)
 
 
 // CHARTS

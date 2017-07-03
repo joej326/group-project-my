@@ -1,16 +1,18 @@
 import { combineReducers } from 'redux'
-import { reducer as formReducer } from 'redux-form'
+import { reducer as FormReducer } from 'redux-form'
 
 // *** Events for Calendar ***
-import EventsReducer from './Calendar/reducer_events'
-import GetEventsReducer from './Calendar/reducer_get_events'
+import EventsReducer from './Calendar/reducer_get_events'
+
+// *** Charts for Charts ***
+import ChartsReducer from './Charts/reducer_get_charts'
 
 
 
 const rootReducer = combineReducers({
    events: EventsReducer
-   , getEvents: GetEventsReducer
-   , form: formReducer
+   , charts: ChartsReducer
+   , form: FormReducer
 })
 
 export default rootReducer

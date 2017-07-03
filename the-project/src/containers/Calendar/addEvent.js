@@ -21,26 +21,17 @@ class EventNew extends Component {
 
    renderField(field){
       return (
-         <div>
-            <label>{field.label}</label>
+         <div
+         className="black-text">
+            <label>
+                  <h4>{field.label}</h4>
+            </label>
             <input
             type="text"
             className="form-control"
+            placeholder="Title"
             {...field.input}
             />
-            {field.meta.touched ? field.meta.error : ''}
-         </div>
-      )
-   }
-
-   renderAllDay(field){
-      return (
-         <div className='checkbox'>
-            <label></label>
-            <input
-            type='checkbox'
-            {...field.input}
-            /> All Day
             {field.meta.touched ? field.meta.error : ''}
          </div>
       )
@@ -49,7 +40,7 @@ class EventNew extends Component {
    renderDate(field){
       return (
          <div>
-            <label>{field.label}</label>
+            <label><h4>{field.label}</h4></label>
             <input
             type='date'
             className='form-control'
@@ -64,6 +55,10 @@ class EventNew extends Component {
       this.props.createEvent(values)
    }
 
+   submitEvent(){
+         window.location.reload()
+   }
+
    render() {
       const { handleSubmit } = this.props
 
@@ -75,11 +70,11 @@ class EventNew extends Component {
                name="title"
                component={this.renderField}
                />
-               <Field
-               label="All Day"
-               name="allDay"
-               component={this.renderAllDay}
-               />
+               {/*<Field
+               label="Desctiption"
+               name="desc"
+               component={this.renderField}
+               />*/}
                <Field
                label="Start Date"
                name="startDate"
@@ -91,7 +86,11 @@ class EventNew extends Component {
                component={this.renderDate}
                />
                </div>
-               <button className="btn btn-primary">Add Event</button>
+               <button 
+               className="btn btn-primary"
+               onClick = {this.submitEvent}>
+               Add Event
+               </button>
             </form>
       )
    }
@@ -102,10 +101,6 @@ function validate(values){
 
    if(!values.title){
       errors.title = "Enter an Event Title"
-   }
-
-   if(!values.allDay){
-      errors.allDay = "Is this an allday event?"
    }
 
    if(!values.start){
