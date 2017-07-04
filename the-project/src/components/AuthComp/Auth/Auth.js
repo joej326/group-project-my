@@ -20,12 +20,15 @@ export default class Auth {
   }
 
   login() {
+    console.log('login function ', this.auth0.authorize())
     this.auth0.authorize();
   }
 
   handleAuthentication() {
     this.auth0.parseHash((err, authResult) => {
+      console.log('this is handleAuth ', authResult)
       if (authResult && authResult.accessToken && authResult.idToken) {
+        console.log('handleAuth function ', authResult)
         this.setSession(authResult);
         history.replace('/home');
       } else if (err) {
@@ -51,8 +54,8 @@ export default class Auth {
     localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
     localStorage.removeItem('expires_at');
-    // navigate to the home route
-    history.replace('/home');
+    // navigate to the login route
+    history.replace('/login');
   }
 
   isAuthenticated() {
