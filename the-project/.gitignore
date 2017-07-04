@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-auth0-variables.js
+
 
 # testing
 /coverage
@@ -23,3 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 config.js
+auth0-variables.js

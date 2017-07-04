@@ -19,7 +19,7 @@ class App extends Component {
 
   render() {
     const { isAuthenticated } = this.props.auth;
-
+console.log('login.js ', isAuthenticated())
     return (
        <div className="container-fluid">
        

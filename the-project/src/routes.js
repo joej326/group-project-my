@@ -36,8 +36,8 @@ export const makeMainRoutes = () => {
      <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter history={history} component={AuthApp}>
         <div>
-          <Route exact path="/login" render={(props) => <AuthApp auth={auth} {...props} />} />
-          <Route path="/" render={(props) => <App auth={auth} {...props} />} />
+          <Route path="/login" render={(props) => <AuthApp auth={auth} {...props} />} />
+          <Route exact path="/" render={(props) => <App auth={auth} {...props} />} />
 
         </div>
        </BrowserRouter>

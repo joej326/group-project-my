@@ -44,7 +44,7 @@ class Login extends Component {
   
     const { isAuthenticated } = this.props.auth;
     if (isAuthenticated()) {
-      console.log('logged in!')
+      console.log("is authenticated ", isAuthenticated() )
       return (
         <div>
           <Navbar/>
@@ -64,7 +64,8 @@ class Login extends Component {
     return (
        <div className="container-fluid">
        
-                <Redirect to="/login" />   
+                {//<Redirect to="/login" />}   
+                }
          
       </div>
     )
