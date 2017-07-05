@@ -34,9 +34,9 @@ app.set('db', massiveServer)
 var db = app.get('db')
 
 // SESSION AND PASSPORT //
-var passport = require('./services/passport');
-app.use(passport.initialize());
-app.use(passport.session());
+// var passport = require('./services/passport');
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // PASSPORT ENDPOINTS //
 app.get('/auth', function (req, res, next) {

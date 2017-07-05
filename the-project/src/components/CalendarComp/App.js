@@ -27,7 +27,7 @@ class App extends Component {
          className="row">
 
           <div
-          className="col-md-6 col-md-offset-3">
+          className="col-md-5 col-md-offset-1">
             <Calendar 
             events = { this.props.events.map((event) => {
                   return new modifyEvent(event)
@@ -43,23 +43,17 @@ class App extends Component {
             }) } />
             </div>
 
-         </div>
-
-          <div
-            className="row" >
-
              <div
-            className="col-md-3 col-md-offset-3 black-text">
+            className="col-md-5 black-text">
+
             <EventList events = { this.props.events } />
-         </div>
 
-            <div
-            className="col-md-3" >
             <AddEvent />
-            </div>
-          </div>
 
           </div>
+
+        </div>
+        </div>
       )
    }
 }
@@ -72,3 +66,4 @@ function mapStateToProps(state){
 
 
 export default connect(mapStateToProps, { fetchEvents })(App)
+

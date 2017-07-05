@@ -19,6 +19,10 @@ import Auth from './components/AuthComp/Auth/Auth';
 import App from './components/AuthComp/Home/App';
 import Calendar from './components/CalendarComp/App';
 
+import ExecView from './containers/ExecView/App'
+import SalesView from './containers/SalesView/App'
+import FinancialView from './containers/FinancialView/App'
+
 
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
@@ -36,8 +40,15 @@ export const makeMainRoutes = () => {
      <Provider store={createStoreWithMiddleware(reducers)}>
       <BrowserRouter history={history} component={AuthApp}>
         <div>
-          <Route path="/login" render={(props) => <AuthApp auth={auth} {...props} />} />
-          <Route exact path="/" render={(props) => <App auth={auth} {...props} />} />
+          {/*<Route path="/login" render={(props) => <AuthApp auth={auth} {...props} />} />
+          <Route exact path="/" render={(props) => <App auth={auth} {...props} />} />*/}
+
+          {/*Delete me when Login is fixed*/}
+          <Route exact path="/calendar" component={ Calendar } />
+          <Route exact path="/exec" component={ ExecView } />
+          <Route exact path="/sales" component={ SalesView } />
+          <Route exact path="/finances" component={ FinancialView } />
+
 
         </div>
        </BrowserRouter>
