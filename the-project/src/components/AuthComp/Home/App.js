@@ -64,8 +64,7 @@ class Login extends Component {
     return (
        <div className="container-fluid">
        
-                {//<Redirect to="/login" />}   
-                }
+                <Redirect to="/login" />
          
       </div>
     )
