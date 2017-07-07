@@ -46,8 +46,8 @@ export const makeMainRoutes = () => {
           {/*Delete me when Login is fixed*/}
           <Route exact path="/calendar" component={ Calendar } />
           <Route exact path="/exec" component={ ExecView } />
-          <Route exact path="/sales" component={ SalesView } />
-          <Route exact path="/finances" component={ FinancialView } />
+          <Route exact path="/sales" component={ FinancialView } />
+          <Route exact path="/finances" component={ SalesView } />
 
 
         </div>
