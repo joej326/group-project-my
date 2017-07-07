@@ -22,6 +22,7 @@ import Login from './components/AuthComp/Login';
 import ExecView from './containers/ExecView/App'
 import SalesView from './containers/SalesView/App'
 import FinancialView from './containers/FinancialView/App'
+import NavBar from './containers/Nav_Bar';
 
 
 
@@ -45,9 +46,16 @@ export const makeMainRoutes = () => {
           <Route exact path="/" component={ Login } />
           {/*Delete me when Login is fixed*/}
           <Route exact path="/calendar" component={ Calendar } />
+          <Route exact path="/taskboard" component={ TaskboardApp } />
           <Route exact path="/exec" component={ ExecView } />
           <Route exact path="/sales" component={ SalesView } />
           <Route exact path="/finances" component={ FinancialView } />
+
+          <Route exact path="/calendar" component={ NavBar } />
+          <Route exact path="/taskboard" component={ NavBar } />
+          <Route exact path="/exec" component={ NavBar } />
+          <Route exact path="/sales" component={ NavBar } />
+          <Route exact path="/finances" component={ NavBar } />
 
 
         </div>
