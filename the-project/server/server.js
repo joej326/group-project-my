@@ -92,6 +92,7 @@ app.get('/api/me', userCtrl.me)
 // EVENTS
 app.get('/api/events', eventsCtrl.getAllEvents)
 app.post('/api/newevent', eventsCtrl.createEvent)
+app.delete('/api/deleteevent/:id', eventsCtrl.deleteEvent)
 
 
 // CHARTS

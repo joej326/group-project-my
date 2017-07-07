@@ -15,7 +15,8 @@ module.exports = {
 
    createEvent: (req, res, next) => {
       let event = req.body
-   db.events.add_event([1, 9, event.title, false, event.startDate, event.endDate], (err, event) => {
+      let eventId = Math.floor(Math.random() * 100)
+   db.events.add_event([1, eventId, event.title, false, event.startDate, event.endDate], (err, event) => {
       if (err) {
          console.log("Add Event ERROR: ", err)
          return res.status(500).send(err)
@@ -23,7 +24,19 @@ module.exports = {
          return res.status(200).send(event)
       }
    })
-   }
+},
+
+   deleteEvent: (req, res, next) => {
+         let event = req.params.id
+      db.events.delete_event([event], (err, event) => {
+         if (err) {
+            console.log("Delete Event ERROR: ", err)
+            return res.status(500).send(err)
+         } else {
+            return res.status(200).send(event)
+         }
+      })
+      }
 
 
 }

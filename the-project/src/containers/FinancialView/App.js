@@ -1,40 +1,20 @@
 import React, { Component } from 'react'
-import _ from 'lodash'
 import { connect } from 'react-redux'
 
-// *** Actions
-import { fetchRevenue } from '../../actions'
-import { fetchNetExpenses } from '../../actions'
-import { fetchBudget } from '../../actions'
-import { fetchDTE } from '../../actions'
-import { fetchProfitMargin } from '../../actions'
+// *** Libraries
+import _ from 'lodash'
 
+// *** Styling
 import './financial.css'
 
 
 class FinancialView extends Component {
    constructor(props){
       super(props)
-      this.state = {
-         salesOpps: [
-         { name: "Nate A.", sales: 288900, goal: 300000},
-         { name: "Isaac C.", sales: 221500, goal: 280000},
-         { name: "Tiffany M.", sales: 342000, goal: 300000},
-         { name: "Andrea P.", sales: 294500, goal: 280000}
-      ]
-   }
+
    this.renderTableRows = this.renderTableRows.bind(this)
    }
 
-   // componentDidMount(){
-   //    console.log("Revenue: ", this.props.fetchRevenue())
-   //    console.log("Net Expenses: ", this.props.fetchNetExpenses())
-   //    console.log("Budget: ", this.props.fetchBudget())
-   //    console.log("Debt To Equity: ", this.props.fetchDTE())
-   //    console.log("Profit Margin: ", this.props.fetchProfitMargin())
-
-
-   // }
 
    renderTableRows(){
       return _.map(this.state.salesOpps, opp => {
@@ -147,4 +127,4 @@ class FinancialView extends Component {
    }
 }
 
-export default connect(null, { fetchRevenue, fetchNetExpenses, fetchBudget, fetchDTE, fetchProfitMargin })(FinancialView)
+export default connect(null)(FinancialView)

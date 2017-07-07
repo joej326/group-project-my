@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import { Field, reduxForm } from 'redux-form'
 import { connect } from 'react-redux'
@@ -24,7 +23,7 @@ class EventNew extends Component {
          <div
          className="black-text">
             <label>
-                  <h4>{field.label}</h4>
+                  <h4 className="white-text">{field.label}</h4>
             </label>
             <input
             type="text"
@@ -40,7 +39,7 @@ class EventNew extends Component {
    renderDate(field){
       return (
          <div>
-            <label><h4>{field.label}</h4></label>
+            <label><h4 className="white-text">{field.label}</h4></label>
             <input
             type='date'
             className='form-control'
