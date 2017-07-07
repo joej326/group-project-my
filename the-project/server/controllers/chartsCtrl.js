@@ -69,7 +69,7 @@ module.exports = {
    },
    //Get Sales Opps
    getSalesOpps: (req, res, next) => {
-      db.charts.sales_opps((err, salesOpps) => {
+      db.charts.reps_q2((err, salesOpps) => {
          if(err){
             console.log(err)
             return status(500).send(err)

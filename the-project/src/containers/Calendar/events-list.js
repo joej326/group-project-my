@@ -2,15 +2,26 @@ import React, { Component } from 'react'
 import _ from 'lodash'
 import { connect } from 'react-redux'
 
-import Events from './events'
-
 class EventsIndex extends Component {
 
-   deleteEvent(event){
-      console.log(event)
+   renderEvents(){
+      return _.map(this.props.events, event => {
+         return (
+            <div 
+            key={event.event_id}
+            className="panel-body">
+               {event.title}
+               <div
+               className="text-right">
+               <button
+               className="btn btn-danger">
+                  Delete
+               </button>
+               </div>
+            </div>
+         )
+      })
    }
-
- 
 
    render() {
       return (
@@ -20,11 +31,7 @@ class EventsIndex extends Component {
             Events</h4>
             <div
             className="panel panel-default black-text">
-               { this.props.events.map( eventItem => {
-                  return (
-                     <Events event = { eventItem }/>
-                     )
-               }) }
+               { this.renderEvents() }
             </div>               
          </div>
       )

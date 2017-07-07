@@ -46,9 +46,9 @@ class App extends Component {
              <div
             className="col-md-5 black-text">
 
-            <AddEvent />
-
             <EventList events = { this.props.events } />
+
+            <AddEvent />
 
           </div>
 

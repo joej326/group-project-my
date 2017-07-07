@@ -1,0 +1,32 @@
+.mother-div{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5vw;
+}
+.chart{
+  width: 25vw;
+  height: 25vw;
+  border: solid white 0.2vw;
+  padding: 0vw 0vw 0vw 1vw;
+  margin: 2vw 0vw 0vw 0vw;
+}
+canvas{
+  font-size: 25vw;
+}
+
+.x-vertical{
+  height: 47vw;
+  width: 10vw;
+  border-left: solid white 0.3vw;
+  position: absolute;
+  left: 50vw;
+  top: 2vw;
+}
+.x-horizontal{
+  height: 2vw;
+  width: 70vw;
+  border-bottom: solid white 0.3vw;
+  position: relative;
+  left: 15vw;
+  bottom: 2.5vw;
+}

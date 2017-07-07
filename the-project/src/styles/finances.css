@@ -1,0 +1,23 @@
+.mother-div{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5vw;
+}
+.chart{
+  width: 20vw;
+  height: 20vw;
+  color: white;
+}
+#debt-to-equity{
+  width: 36vw !important;
+  position: relative;
+
+  height: 30vw !important;
+}
+.debt-to-equity-div{
+  width: 38.5vw;
+  /* margin-bottom: 3vw; */
+  position: relative;
+  bottom: 5vw;
+  height: 31vw;
+}
