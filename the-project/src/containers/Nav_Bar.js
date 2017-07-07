@@ -54,7 +54,7 @@ export default class NavBar extends Component {
               <i className="fa fa-line-chart" aria-hidden="true"></i>  Charts
               <span className="caret"></span></a>
             <ul className="dropdown-menu charts-dropdown">
-              <li id='first-charts-category'><a href="/finances">Finance</a></li>
+              <li id='first-charts-category'><a href="/finances">Finances</a></li>
               <li><a href="/sales">Sales</a></li>
             </ul>
           </li>
