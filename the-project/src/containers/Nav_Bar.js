@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-// import { connect } from 'react-redux';
+import React, { Component } from 'react'
 
 import $ from 'jquery';
 
@@ -54,9 +53,9 @@ export default class NavBar extends Component {
               <i className="fa fa-line-chart" aria-hidden="true"></i>  Charts
               <span className="caret"></span></a>
             <ul className="dropdown-menu charts-dropdown">
-              <li id='first-charts-category'><a href="#">Charts 1</a></li>
-              <li><a href="#">Charts 2</a></li>
-              <li><a href="#">Charts 3</a></li>
+              <li id='first-charts-category'><a href="/exec"> Executive</a></li>
+              <li><a href="/sales"> Sales</a></li>
+              <li><a href="/finances"> Financial</a></li>
             </ul>
           </li>
         </ul>

@@ -22,9 +22,21 @@ export const CREATE_EVENT = 'create_event'
 
 export function createEvent(values){
    const request = axios.post(`${ROOT_URL}/newevent`, values)
-   console.log(request)
+
    return {
       type: CREATE_EVENT
+      , payload: request
+   }
+}
+
+// *** Delete Event
+export const DELETE_EVENT = 'delete_event'
+
+export function deleteEvent(event_id){
+   console.log(event_id)
+   const request = axios.delete(`${ROOT_URL}/deleteevent/${event_id}`)
+   return {
+      type: DELETE_EVENT
       , payload: request
    }
 }
@@ -112,7 +124,7 @@ export const FETCH_SALESOPPS = 'fetch_salesopps'
 
 export function fetchSalesOpps() {
    const request = axios.get(`${ROOT_URL}/charts/salesopps`)
-      
+      console.log("fetchSalesOpps Request: ", request)
    return {
       type: FETCH_SALESOPPS
       , payload: request

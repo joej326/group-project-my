@@ -8,9 +8,20 @@ import { fetchRepsQ2 } from '../../actions'
 
 
 class SalesView extends Component {
+   constructor(props){
+      super(props)
+      this.state = {
+         oppsData: null
+      }
+   }
    componentDidMount(){
-      console.log("Sales Opps: ", this.props.fetchSalesOpps())
-      console.log("Reps Q2: ", this.props.fetchRepsQ2())
+         this.props.fetchSalesOpps().then((results)=>{
+               this.setState({
+            oppsData: results.payload.data
+         })
+      })
+
+      
 
    }
 
