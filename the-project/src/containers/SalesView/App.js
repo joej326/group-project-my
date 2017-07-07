@@ -8,22 +8,35 @@ import { fetchNetExpenses } from '../../actions'
 import { fetchBudget } from '../../actions'
 import { fetchDTE } from '../../actions'
 import { fetchProfitMargin } from '../../actions'
+// *** Actions
+import { fetchSalesOpps } from '../../actions'
+import { fetchRepsQ2 } from '../../actions'
+
+import './../../styles/finances.css';
+import Chart from 'chart.js';
 
 
-class FinancialView extends Component {
+class SalesView extends Component {
+   constructor(props){
+      super(props)
+      this.state = {
+         oppsData: null
+      }
+   }
    componentDidMount(){
-      console.log("Revenue: ", this.props.fetchRevenue())
-      console.log("Net Expenses: ", this.props.fetchNetExpenses())
-      console.log("Budget: ", this.props.fetchBudget())
-      console.log("Debt To Equity: ", this.props.fetchDTE())
-      console.log("Profit Margin: ", this.props.fetchProfitMargin())
+         this.props.fetchSalesOpps().then((results)=>{
+               this.setState({
+            oppsData: results.payload.data
+         })
+      })
+
 
    }
 
    render(){
       return (
          <div>
-         
+
          <div className="row">
          <div
          className="col-md-offset-2 col-md-4">
@@ -49,4 +62,4 @@ class FinancialView extends Component {
    }
 }
 
-export default connect(null, { fetchRevenue, fetchNetExpenses, fetchBudget, fetchDTE, fetchProfitMargin })(FinancialView)
+export default connect(null, { fetchRevenue, fetchNetExpenses, fetchBudget, fetchDTE, fetchProfitMargin })(SalesView)
