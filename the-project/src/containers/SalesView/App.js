@@ -3,14 +3,20 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 // *** Actions
-import { fetchSalesOpps } from '../../actions'
-import { fetchRepsQ2 } from '../../actions'
+import { fetchRevenue } from '../../actions'
+import { fetchNetExpenses } from '../../actions'
+import { fetchBudget } from '../../actions'
+import { fetchDTE } from '../../actions'
+import { fetchProfitMargin } from '../../actions'
 
 
-class SalesView extends Component {
+class FinancialView extends Component {
    componentDidMount(){
-      console.log("Sales Opps: ", this.props.fetchSalesOpps())
-      console.log("Reps Q2: ", this.props.fetchRepsQ2())
+      console.log("Revenue: ", this.props.fetchRevenue())
+      console.log("Net Expenses: ", this.props.fetchNetExpenses())
+      console.log("Budget: ", this.props.fetchBudget())
+      console.log("Debt To Equity: ", this.props.fetchDTE())
+      console.log("Profit Margin: ", this.props.fetchProfitMargin())
 
    }
 
@@ -20,50 +26,21 @@ class SalesView extends Component {
          
          <div className="row">
          <div
-         className="col-md-offset-1 col-md-3">
-            Name: Revenue
-            <br />
-            Data: Revenue
-            <br />
-            Chart Type: Pie
-         </div>
-
-         <div
-         className="col-md-offset-1 col-md-3">
-            Name: Net Expenses
-            <br />
-            Data: Net Expenses Total
-            <br />
-            Chart Type: Pie
-         </div>
-
-         <div
-         className="col-md-offset-1 col-md-3">
-            Name: Budget
-            <br />
-            Data: Budget Total
-            <br />
-            Chart Type: Pie
-         </div>
-         </div>
-
-         <div className="row">
-         <div
          className="col-md-offset-2 col-md-4">
-            Name: Debt to Equity
+            Name: Sales Ops
             <br />
-            Data: DTE
+            Data: ??
             <br />
-            Chart Type: Spike Chart
+            Chart Type: Table
          </div>
 
          <div
          className="col-md-offset-1 col-md-4">
-            Name: Profit Margin & Net Expenses
+            Name: Reps
             <br />
-            Data: Profit Margin / Net Expenses
+            Data: ??
             <br />
-            Chart Type: Stacked SparkLine
+            Chart Type: Bar Chart
          </div>
          </div>
 
@@ -72,4 +49,4 @@ class SalesView extends Component {
    }
 }
 
-export default connect(null, { fetchSalesOpps, fetchRepsQ2 })(SalesView)
+export default connect(null, { fetchRevenue, fetchNetExpenses, fetchBudget, fetchDTE, fetchProfitMargin })(FinancialView)
